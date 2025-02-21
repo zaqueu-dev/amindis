@@ -145,5 +145,21 @@ void chestProb(){
         printf("Você encontrou uma foto. Nela, astronautas põem seus pés sobre a lua pela primeira vez na história. Você se pergunta onde está a lua. Você se pergunta se consegue chegar até lá também.\n");
         nostalgia++;
         stage();
+    }else if(random < 256){
+
+        camera();
+
+        printf("Você encontrou uma câmera. Deseja guardá-la? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar == 'S' || guardar == 's'){
+            printf("Alguns momentos não puderam ser capturados no tempo. Alguns outros foram registrados. No final, apenas essas imagens restaram.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou a câmera. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
+
     }
 }

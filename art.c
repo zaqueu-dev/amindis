@@ -51,3 +51,11 @@ void astronaut(){
     printf("      | We came in Peace for all Mankind |\n");
     printf("       ---------------------------=apx=--\n");
 }
+
+void camera(){
+    printf("         _\n");
+    printf("     _n_|_|_,_\n");
+    printf("    |===.-.===|\n");
+    printf("    |  ((_))  |\n");
+    printf("    '==='-'==='\n");
+}

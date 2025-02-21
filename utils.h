@@ -13,5 +13,7 @@ void checkProb();
 //art
 void origami();
 void ursinho();
+void astronauta();
+void camera();
 
 #endif
