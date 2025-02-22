@@ -78,3 +78,81 @@ void medal(){
     printf("        `-.....-'\n");
     
 }
+
+void guitar(){
+    printf("       ___\n");
+    printf("     o|* *|o\n");
+    printf("     o|* *|o\n");
+    printf("     o|* *|o\n");
+    printf("      \\===/\n");
+    printf("       |||\n");
+    printf("       |||\n");
+    printf("       |||\n");
+    printf("       |||\n");
+    printf("    ___|||___\n");
+    printf("   /   |||   \\n");
+    printf("  /    |||    \\n");
+    printf(" |     |||     |\n");
+    printf("  \\   (|||)   /\n");
+    printf("   |   |||   |\n");
+    printf("  /    |||    \\n");
+    printf(" /     |||     \\n");
+    printf("/      |||      \\n");
+    printf("|     [===]     |\n");
+    printf(" \\             /\n");
+    printf("  '.         .'\n");
+    printf("    '-------'\n");
+}
+
+void light(){
+    printf("  ..---..\n");
+    printf(" /       \\\n");
+    printf("|         |\n");
+    printf(":         ;\n");
+    printf(" \\  \\~/  /\n");
+    printf("  `, Y ,'\n");
+    printf("   |_|_|\n");
+    printf("   |===|\n");
+    printf("   |===|\n");
+    printf("    \\_/\n");
+}
+
+void knight(){
+    printf("         ,....,\n");
+    printf("      ,::::::<\n");
+    printf("     ,::/^\\\"``.\n");
+    printf("    ,::/, `   e`.\n");
+    printf("   ,::; |        '.\n");
+    printf("   ,::|  \\___,-.  c)\n");
+    printf("   ;::|     \\   '-'\n");
+    printf("   ;::|      \\\n");
+    printf("   ;::|   _.=`\\\n");
+    printf("   `;:|.=` _.=`\\\n");
+    printf("     '|_.=`   __\\\n");
+    printf("     `\\_..==`` /\n");
+    printf("      .'.___.-'.\n");
+    printf("     /          \\\n");
+    printf("    ('--......--')\n");
+    printf("    /'--......--'\\\n");
+    printf("    `\"--......--\"`\n");
+}
+
+void car(){
+    printf("        _______\n");
+    printf("       //  ||\\ \\\n");
+    printf(" _____//___||_\\ \\___\n");
+    printf(" )  _          _    \\\n");
+    printf(" |_/ \\________/ \\___|\n");
+    printf("___\\_/________\\_/______\n");
+}
+
+void star(){
+    printf("      ,\n");
+    printf("   \\  :  /\n");
+    printf("`. __/ \\__ .'\n");
+    printf("_ _\\     /_ _\n");
+    printf("   /_   _\\\n");
+    printf(" .'  \\ /  `.\n");
+    printf("   /  :  \\\n");
+    printf("      '\n");
+}

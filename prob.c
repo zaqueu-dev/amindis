@@ -31,9 +31,12 @@ void checkProb(){
       char abrir;
       scanf(" %c", &abrir);
       if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
+        chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a saída. Game Over.\n");
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
     case 444:
@@ -41,9 +44,12 @@ void checkProb(){
       char abrir;
       scanf(" %c", &abrir);
       if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
+        chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a saída. Game Over.\n");
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
     case 555:
@@ -51,9 +57,12 @@ void checkProb(){
       char abrir;
       scanf(" %c", &abrir);
       if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
+        chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a sssaída. Game Over.\n");
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
     case 666:
@@ -65,9 +74,12 @@ void checkProb(){
       char abrir;
       scanf(" %c", &abrir);
       if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
+        chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a saída. Game Over.\n");
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
     case 888: 
@@ -75,9 +87,12 @@ void checkProb(){
       char abrir;
       scanf(" %c", &abrir);
       if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
+        chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a saída. Game Over.\n");
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
     case 999:
@@ -85,9 +100,12 @@ void checkProb(){
       char abrir;
       scanf(" %c", &abrir);
       if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
+        chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a saída. Game Over.\n");
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
     default:
@@ -100,7 +118,10 @@ void checkProb(){
         if(abrir == 'S' || abrir == 's'){
           printf("Você encontrou a saída! Parabéns!\n");
         }else if(abrir == 'N' || abrir == 'n'){
-          printf("Você não encontrou a saída. Game Over.\n");
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          stage();
         }
       }
       break;
@@ -108,7 +129,7 @@ void checkProb(){
 }
 
 void chestProb(){
-    int random = rand() % 1000;
+    int random = rand() % 886;
     if(random < 43){
         
         origami();
@@ -185,5 +206,96 @@ void chestProb(){
             printf("Você não guardou a medalha. O objeto ficou para o esquecimento.\n");
             stage();
         }
+    } else if(random < 440){
+        
+        guitar();
+
+        printf("Você encontrou um violão. Deseja guardá-lo? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
+        if(guardar == 'S' || guardar == 's'){
+            printf("Você toca uma nota. O violão responde com um som suave. A madeira tem cheiro de mofo, da mais natural forma de solidão.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou o violão. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
+    }else if(random < 537){
+
+        light();
+
+        printf("Você encontrou uma lâmpada quebrada. Deseja guardá-la? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
+        if(guardar == 'S' || guardar == 's'){
+            printf("Parece ter iluminado os períodos de escuridão. Parece ter deixado claro o caminho para os que estavam perdidos.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou lâmpada quebrada. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
+    }else if (random < 669){
+
+        knight();
+
+        printf("Você encontrou uma peça de xadrez. Deseja guardá-la? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
+        if(guardar == 'S' || guardar == 's'){
+            printf("Afinal, para que uma batalha? O seu ego interno parece ter diminuido. A peça é sem sentido sem uma luta. Você se sente determinado a achar um propósito.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou a peça de xadrez. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
+    }else if (random < 730){
+        
+        car();
+
+        printf("Você encontrou um carrinho de brinquedo. Deseja guardá-lo? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
+        if(guardar == 'S' || guardar == 's'){
+            printf("Alguém parece ter brincado muito com isso. Você se pergunta o porquê o deixaram. Você se pergunta se realmente o deixaram. Sua nostalgia aumenta à medida que você brinca com o carrinho.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou o carrinho de brinquedo. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
+    }else{
+
+        star();
+
+        printf("Você encontrou uma estrela. Deseja guardá-la? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
+        if(guardar == 'S' || guardar == 's'){
+            printf("A estrela brilha com um brilho antigo. Você se pergunta se ela ainda brilha, ou se já desapareceu. Você se pergunta se o brilho é o passado. Você se pergunta se você ainda brilha.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou a estrela. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
+
     }
 }

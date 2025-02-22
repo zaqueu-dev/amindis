@@ -16,5 +16,10 @@ void ursinho();
 void astronauta();
 void camera();
 void medal();
+void guitar();
+void light();
+void knight();
+void car();
+void star(); //10
 
 #endif
