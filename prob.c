@@ -109,20 +109,28 @@ void checkProb(){
       }
       break;
     default:
-      if(random % 2 == 0){
-        printf("Você encontrou um monstro. Game Over.\n");
+      if(random < 200){
+        printf("Esquerda ou reto? (E/r)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
+      }else if(random < 400){
+        chestProb();
+      }else if(random < 600){
+        printf("Reto ou direita? (R/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
+      }else if(random < 800){
+        printf("Reto ou esquerda? (R/e)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }else{
-        printf("Você encontrou um baú comum. Deseja abrir? (S/n)\n");
-        char abrir;
-        scanf(" %c", &abrir);
-        if(abrir == 'S' || abrir == 's'){
-          printf("Você encontrou a saída! Parabéns!\n");
-        }else if(abrir == 'N' || abrir == 'n'){
-          printf("Esquerda ou direita? (E/d)\n");
-          char escolha;
-          scanf(" %c", &escolha);
-          stage();
-        }
+        printf("Seguir reto? (S)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        stage();
       }
       break;
   }
