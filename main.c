@@ -2,12 +2,12 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "utils.h"
+#include <time.h>
 
 int main(){
+  srand(time(NULL));
 
-  int stage = 0;
-
-  int nostalgia = 0;
+  
 
   char start = telaInicial();
 
@@ -27,23 +27,8 @@ int main(){
 
     char escolha;
     printf("Esquerda ou Direita? (E/d)\n");
-    scanf(" %c", &escolha);
-    if(escolha == '\n'){
-      escolha = 'E';
-    }
-
-    if(escolha == 'E' || escolha == 'e'){
-      printf("Você escolheu a esquerda. Você encontrou um monstro. Game Over.\n");
-    }else if(escolha == 'D' || escolha == 'd'){
-      printf("Você escolheu a direita. Você encontrou um baú. Deseja abrir? (S/n)\n");
-      char abrir;
-      scanf(" %c", &abrir);
-      if(abrir == 'S' || abrir == 's'){
-        printf("Você encontrou a saída! Parabéns!\n");
-      }else if(abrir == 'N' || abrir == 'n'){
-        printf("Você não encontrou a saída. Game Over.\n");
-      }
-    }
+    scanf("%c", &escolha);
+    stage();
   }else if(start == 'N' || start == 'n'){
     printf(".---------------------------------------------.\n");
     printf("|                                             |\n");

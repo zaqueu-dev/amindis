@@ -5,6 +5,7 @@ extern int nostalgia;
 
 char telaInicial();
 void stage();
+void end();
 
 
 void chestProb();

@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "utils.h"  
 
+int nostalgia = 0;
+
 char telaInicial(){
   printf(".---------------------------------------------.\n");
   printf("|                                             |\n");
@@ -34,6 +36,10 @@ char telaInicial(){
   }
 }
 
+void end(){
+  printf("Você encontrou a saída! Parabéns!\n");
+  //diálogo de fim de jogo
+}
 
 void stage(){
   if(nostalgia <= 5){
@@ -44,7 +50,3 @@ void stage(){
   
 }
 
-void end(){
-  printf("Você encontrou a saída! Parabéns!\n");
-  //diálogo de fim de jogo
-}

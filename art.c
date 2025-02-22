@@ -32,7 +32,7 @@ void ursinho(){
     printf(" (__\\___/__)\n");
 }
 
-void astronaut(){
+void astronauta(){
     printf("         ,\n");
     printf("       _=|_\n");
     printf("     _[_## ]_\n");

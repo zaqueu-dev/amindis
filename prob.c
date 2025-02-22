@@ -3,18 +3,27 @@
 #include <stdlib.h>
 #include "utils.h"  
 
+typedef void (*lastCalled)();
+
+void limparBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF); // Limpa o buffer de entrada
+}
 
 void checkProb(){
   int random = rand() % 1000;
+  char abrir;
+
   switch(random){
     case 111:
       printf("Você encontrou um monstro. Game Over.\n");
       break;
     case 222: 
       printf("Você encontrou um baú raro. Deseja abrir? (S/n)\n");
-      char abrir;
+      
       scanf(" %c", &abrir);
-      if(abrir == "\n"){
+      limparBuffer();
+      if(abrir == '\n'){
         abrir = 'S';
       }
       if(abrir == 'S' || abrir == 's'){
@@ -23,45 +32,49 @@ void checkProb(){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
     case 333:
       printf("Você encontrou um baú comum. Deseja abrir? (S/n)\n");
-      char abrir;
       scanf(" %c", &abrir);
+      limparBuffer();
       if(abrir == 'S' || abrir == 's'){
         chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
     case 444:
       printf("Você encontrou um baú comum. Deseja abrir? (S/n)\n");
-      char abrir;
       scanf(" %c", &abrir);
+      limparBuffer();
       if(abrir == 'S' || abrir == 's'){
         chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
     case 555:
       printf("Você encontrou um baú comum. Deseja abrir? (S/n)\n");
-      char abrir;
       scanf(" %c", &abrir);
+      limparBuffer();
       if(abrir == 'S' || abrir == 's'){
         chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
@@ -71,65 +84,173 @@ void checkProb(){
       break;
     case 777:
       printf("Você encontrou um artefato mágico. Deseja tocá-lo? (S/n)\n");
-      char abrir;
       scanf(" %c", &abrir);
+      limparBuffer();
       if(abrir == 'S' || abrir == 's'){
         chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
     case 888: 
       printf("Você encontrou um baú raro. Deseja abrir? (S/n)\n");
-      char abrir;
       scanf(" %c", &abrir);
+      limparBuffer();
       if(abrir == 'S' || abrir == 's'){
         chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
     case 999:
       printf("Você encontrou um baú comum. Deseja abrir? (S/n)\n");
-      char abrir;
       scanf(" %c", &abrir);
+      limparBuffer();
       if(abrir == 'S' || abrir == 's'){
         chestProb();
       }else if(abrir == 'N' || abrir == 'n'){
         printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
     default:
-      if(random < 200){
+      if(random < 45){
+        usleep(1000000);
         printf("Esquerda ou reto? (E/r)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
-      }else if(random < 400){
-        chestProb();
-      }else if(random < 600){
+      }else if(random < 67){
+        printf("Você encontrou um baú. Deseja abrir? (S/n)\n");
+        scanf(" %c", &abrir);
+        limparBuffer();
+        if(abrir == 'S' || abrir == 's'){
+          chestProb();
+        }else if(abrir == 'N' || abrir == 'n'){
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          limparBuffer();
+          stage();
+        }
+      }else if(random < 89){
+        usleep(1000000);
         printf("Reto ou direita? (R/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
+      }else if(random < 113){
+        printf("Você encontrou um baú. Deseja abrir? (S/n)\n");
+        scanf(" %c", &abrir);
+        limparBuffer();
+        if(abrir == 'S' || abrir == 's'){
+          chestProb();
+        }else if(abrir == 'N' || abrir == 'n'){
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          limparBuffer();
+          stage();
+        }
+      }else if(random < 200){
+        usleep(1000000);
+        printf("Esquerda ou direita? (E/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        limparBuffer();
+        stage();
+      }else if(random < 300){
+        printf("Você encontrou um baú. Deseja abrir? (S/n)\n");
+        scanf(" %c", &abrir);
+        limparBuffer();
+        if(abrir == 'S' || abrir == 's'){
+          chestProb();
+        }else if(abrir == 'N' || abrir == 'n'){
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          limparBuffer();
+          stage();
+        }
+      }else if(random < 400){
+        usleep(1000000);
+        printf("Esquerda ou reto? (E/r)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        limparBuffer();
+        stage();
+      }else if(random < 500){
+        printf("Você encontrou um baú. Deseja abrir? (S/n)\n");
+        scanf(" %c", &abrir);
+        limparBuffer();
+        if(abrir == 'S' || abrir == 's'){
+          chestProb();
+        }else if(abrir == 'N' || abrir == 'n'){
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          limparBuffer();
+          stage();
+        }
+      }else if(random < 600){
+        usleep(1000000);
+        printf("Reto ou direita? (R/d)\n");
+        char escolha;
+        scanf(" %c", &escolha);
+        limparBuffer();
+        stage();
+      }else if(random < 700){
+        printf("Você encontrou um baú. Deseja abrir? (S/n)\n");
+        scanf(" %c", &abrir);
+        limparBuffer();
+        if(abrir == 'S' || abrir == 's'){
+          chestProb();
+        }else if(abrir == 'N' || abrir == 'n'){
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          limparBuffer();
+          stage();
+        }
       }else if(random < 800){
-        printf("Reto ou esquerda? (R/e)\n");
+        usleep(1000000);
+        printf("Esquerda ou direita? (E/d)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
+      }else if(random < 900){
+        printf("Você encontrou um baú. Deseja abrir? (S/n)\n");
+        scanf(" %c", &abrir);
+        limparBuffer();
+        if(abrir == 'S' || abrir == 's'){
+          chestProb();
+        }else if(abrir == 'N' || abrir == 'n'){
+          printf("Esquerda ou direita? (E/d)\n");
+          char escolha;
+          scanf(" %c", &escolha);
+          limparBuffer();
+          stage();
+        }
       }else{
-        printf("Seguir reto? (S)\n");
+        usleep(1000000);
+        printf("Esquerda ou reto? (E/r)\n");
         char escolha;
         scanf(" %c", &escolha);
+        limparBuffer();
         stage();
       }
       break;
@@ -137,14 +258,15 @@ void checkProb(){
 }
 
 void chestProb(){
+    char guardar;
     int random = rand() % 886;
     if(random < 43){
         
         origami();
 
         printf("Você encontrou um origami. Deseja guardá-lo? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
+        limparBuffer();
         if(guardar == 'S' || guardar == 's'){
             printf("O origami parece ter sido cuidadosamente projetado. Você se pergunta quem o fez. Você começa a pensar que talvez há outros por esse labirinto.\n");
             stage();
@@ -157,9 +279,9 @@ void chestProb(){
         ursinho();
 
         printf("Você encontrou um ursinho. Deseja guardá-lo? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -182,9 +304,9 @@ void chestProb(){
         camera();
 
         printf("Você encontrou uma câmera. Deseja guardá-la? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -201,9 +323,9 @@ void chestProb(){
         medal();
 
         printf("Você encontrou uma medalha. Deseja guardá-la? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar = "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -219,9 +341,9 @@ void chestProb(){
         guitar();
 
         printf("Você encontrou um violão. Deseja guardá-lo? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -237,9 +359,9 @@ void chestProb(){
         light();
 
         printf("Você encontrou uma lâmpada quebrada. Deseja guardá-la? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -255,9 +377,9 @@ void chestProb(){
         knight();
 
         printf("Você encontrou uma peça de xadrez. Deseja guardá-la? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -273,9 +395,9 @@ void chestProb(){
         car();
 
         printf("Você encontrou um carrinho de brinquedo. Deseja guardá-lo? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
@@ -291,9 +413,9 @@ void chestProb(){
         star();
 
         printf("Você encontrou uma estrela. Deseja guardá-la? (S/n)\n");
-        char guardar;
         scanf(" %c", &guardar);
-        if(guardar == "\n"){
+        limparBuffer();
+        if(guardar == '\n'){
             guardar = 'S';
         }
         if(guardar == 'S' || guardar == 's'){
