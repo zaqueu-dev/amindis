@@ -130,6 +130,9 @@ void chestProb(){
         printf("Você encontrou um ursinho. Deseja guardá-lo? (S/n)\n");
         char guardar;
         scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
         if(guardar == 'S' || guardar == 's'){
             printf("O ursinho parece um pouco desgastado. Você se pergunta de quem era tal brinquedo. Sua nostalgia aumenta. Você se lembra de algo, no fundo.\n");
             nostalgia++;
@@ -152,6 +155,9 @@ void chestProb(){
         printf("Você encontrou uma câmera. Deseja guardá-la? (S/n)\n");
         char guardar;
         scanf(" %c", &guardar);
+        if(guardar == "\n"){
+            guardar = 'S';
+        }
         if(guardar == 'S' || guardar == 's'){
             printf("Alguns momentos não puderam ser capturados no tempo. Alguns outros foram registrados. No final, apenas essas imagens restaram.\n");
             nostalgia++;
@@ -161,5 +167,23 @@ void chestProb(){
             stage();
         }
 
+    }else if(random < 345){
+        
+        medal();
+
+        printf("Você encontrou uma medalha. Deseja guardá-la? (S/n)\n");
+        char guardar;
+        scanf(" %c", &guardar);
+        if(guardar = "\n"){
+            guardar = 'S';
+        }
+        if(guardar == 'S' || guardar == 's'){
+            printf("A medalha brilha com um brilho antigo. Você se pergunta quem a mereceu. Você se pergunta se você a merece.\n");
+            nostalgia++;
+            stage();
+        }else if(guardar == 'N' || guardar == 'n'){
+            printf("Você não guardou a medalha. O objeto ficou para o esquecimento.\n");
+            stage();
+        }
     }
 }

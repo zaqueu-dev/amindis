@@ -59,3 +59,22 @@ void camera(){
     printf("    |  ((_))  |\n");
     printf("    '==='-'==='\n");
 }
+
+void medal(){
+    printf("     _______________\n");
+    printf("    |@@@@|     |####|\n");
+    printf("    |@@@@|     |####|\n");
+    printf("    |@@@@|     |####|\n");
+    printf("    \\@@@@|     |####/\n");
+    printf("     \\@@@|     |###/\n");
+    printf("      `@@|_____|##'\n");
+    printf("           (O)\n");
+    printf("        .-'''''-.\n");
+    printf("      .'  * * *  `.\n");
+    printf("     :  *       *  :\n");
+    printf("    : ~ █ █ █ █ █ ~ :\n");
+    printf("    : ~ A W A R D ~ :\n");
+    printf("      `.  * * *  .'\n");
+    printf("        `-.....-'\n");
+    
+}

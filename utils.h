@@ -15,5 +15,6 @@ void origami();
 void ursinho();
 void astronauta();
 void camera();
+void medal();
 
 #endif
