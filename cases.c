@@ -18,14 +18,14 @@ void case1() {
   printf("_0000000000000000_\n");
   printf("__00000000000000_\n");
   printf("____00000000000_          10 itens\n");
-  printf("_______00000_             você tem 3 chances.\n");
+  printf("_______00000_             você tem 5 chances.\n");
   printf("_________0_\n");
   printf("________*_\n");
   printf("_______*_\n");
   printf("______*_\n");
   printf("______*_                   lembre-se\n");
   printf("_______*_\n");
-  printf("________*_\n");
+  printf("________*_                 escape do loop\n");
   printf("_________*_\n");
   last = case1;
   animation();
@@ -116,8 +116,8 @@ void case7() { // ir a esquerda tem caminho de volta
   scanf(" %c", &escolha);
   if (escolha == 'E' || escolha == 'e') {
     printf("Esquerda...\n");
-    case6();
     last = case7;
+    case6();
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
     checkProb();
@@ -134,8 +134,8 @@ void case8() { // ir a direita tem caminho de volta
     checkProb();
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
-    case6();
     last = case7;
+    case6();
   }
 }
 
