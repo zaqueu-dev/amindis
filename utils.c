@@ -4,6 +4,8 @@
 #include "utils.h"  
 
 int nostalgia = 0;
+lastCalled last = NULL;
+int gotten[10] = {0};
 
 char telaInicial(){
   printf(".---------------------------------------------.\n");

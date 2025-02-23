@@ -7,28 +7,23 @@
 int main(){
   srand(time(NULL));
 
-  
-
   char start = telaInicial();
 
   if(start == 'S' || start == 's'){
     printf("Bem vindo a Amindis! Você precisa achar a saída para a █████ $#$$%%$###$#$!!!\n");
     usleep(1000000);
-    printf("\n.");
+    printf(".\n");
 
     fflush(stdout);
     usleep(1000000);
-    printf("\n.");
+    printf(".\n");
     usleep(1000000);
     fflush(stdout);
     usleep(1000000);
-    printf("\n.\n");
+    printf(".\n");
     fflush(stdout);
 
-    char escolha;
-    printf("Esquerda ou Direita? (E/d)\n");
-    scanf("%c", &escolha);
-    stage();
+    case1();
   }else if(start == 'N' || start == 'n'){
     printf(".---------------------------------------------.\n");
     printf("|                                             |\n");
