@@ -36,6 +36,9 @@ void case1() {
     printf("Esquerda...\n");
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
+  } else {
+    printf("Escolha inválida\n");
+    case1();
   }
   chestProb();
 }
@@ -51,6 +54,9 @@ void case2() { // não coloca no checkProb, senão fica dois voltar seguidos;
   } else if (escolha == 'V' || escolha == 'v') {
     printf("Voltar...\n");
     last();
+  } else {
+    printf("Escolha inválida\n");
+    case2();
   }
 }
 
@@ -65,6 +71,9 @@ void case3() { // seguir a direita acha item
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
     chestProb();
+  } else {
+    printf("Escolha inválida\n");
+    case3();
   }
 }
 
@@ -79,6 +88,9 @@ void case4() { // seguir a esquerda acha item
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
     checkProb();
+  } else {
+    printf("Escolha inválida\n");
+    case4();
   }
 }
 
@@ -91,13 +103,16 @@ void case5() { // as duas direções dão item
     printf("Esquerda...\n");
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
+  } else {
+    printf("Escolha inválida\n");
+    case5();
   }
   chestProb();
 }
 
 void case6() { // não coloca no checkProb, senão fica dois voltar seguidos;
   animation();
-  printf("Esquerda ou voltar? (E/D)\n");
+  printf("Esquerda ou voltar? (E/V)\n");
   char escolha;
   scanf(" %c", &escolha);
   if (escolha == 'E' || escolha == 'e') {
@@ -106,6 +121,9 @@ void case6() { // não coloca no checkProb, senão fica dois voltar seguidos;
   } else if (escolha == 'V' || escolha == 'v') {
     printf("Voltar...\n");
     last();
+  } else {
+    printf("Escolha inválida\n");
+    case6();
   }
 }
 
@@ -121,6 +139,9 @@ void case7() { // ir a esquerda tem caminho de volta
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
     checkProb();
+  } else {
+    printf("Escolha inválida\n");
+    case7();
   }
 }
 
@@ -136,6 +157,9 @@ void case8() { // ir a direita tem caminho de volta
     printf("Direita...\n");
     last = case7;
     case6();
+  } else {
+    printf("Escolha inválida\n");
+    case8();
   }
 }
 
@@ -151,6 +175,9 @@ void case9() { // ir a esquerda tem caminho de volta
   } else if (escolha == 'D' || escolha == 'd') {
     printf("Direita...\n");
     checkProb();
+  } else {
+    printf("Escolha inválida\n");
+    case9();
   }
 }
 
@@ -166,5 +193,8 @@ void case10() { // ir a direita tem caminho de volta
     printf("Direita...\n");
     last = case10;
     case2();
+  } else {
+    printf("Escolha inválida\n");
+    case10();
   }
 }
