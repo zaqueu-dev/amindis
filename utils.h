@@ -11,6 +11,7 @@ extern int gotten[10];
 char telaInicial();
 void stage();
 void end();
+void badEnd();
 
 void case1();
 void case2();
