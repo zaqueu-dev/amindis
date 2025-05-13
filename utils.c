@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <locale.h>
 #define ARRAY_LENGTH(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 int nostalgia = 0;
@@ -29,6 +29,7 @@ char telaInicial() {
   printf("'---------------------------------------------'\n");
 
   char start;
+  setlocale(LC_ALL, "pt_BR.UTF-8");
   printf("\n\n Começar? (S/n)\n");
   scanf("%c", &start);
   if (start == '\n' || start == 'S' || start == 's') {
